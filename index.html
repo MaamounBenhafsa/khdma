@@ -34,12 +34,32 @@
   .table-wrapper-scroll-y {
   display: block;
               }
+              .fa-1x {
+font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+cursor: pointer;
+}
+.dark-blue-text {
+color: #0A38F5;
+}
+.dark-pink-text {
+color: #AC003A;
+}
+.dark-amber-text {
+color: #ff6f00;
+}
+.dark-teal-text {
+color: #004d40;
+}
 
     </style>
   </head>
-  <body class="bg-dark" style="font-family: Courier New; background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);">
-<nav class="navbar navbar-expand-md fixed-top navbar-dark unique-color">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <body class=" mdb-skin bg-skin-lp blue-grey-text" style="font-family: Courier New; color: #607d8b !important; background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);">
+
+
+<nav class="navbar navbar-expand-md navbar-dark footer-copyright">
+    <a class="navbar-brand" href="#">Khdma Browser</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,27 +69,31 @@
                <a class="nav-link waves-effect waves-light" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Contuct Us</a>
+                <a class="nav-link waves-effect waves-light" href="#">Suggest Or Add Khdam</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light" href="#">Suggest Edits</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Lite Mode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
+            </li>
         </ul>
-        <form class="form-inline">
-            <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-        </form>
     </div>
 </nav>
+
+
 <br>
 <br>
 <br>
+
   <h2 class="section-heading h1 pt-2 mb-2 text-center text-white">Search For Khdam Online</h2>
-          <center>
+        <center>
 
           <span class="badge badge-info">
             <img src="img/masson.png" class="img-fluid" alt="masson">
@@ -82,8 +106,8 @@
           </span>
 
           <span class="badge badge-info">
-            <img src="img/masson.png" class="img-fluid" alt="masson">
-            <p>masson</p>
+            <img src="img/pickup.png" class="img-fluid" style="width: 32px ;" alt="truck">
+            <p>mini pikup truck</p>
           </span>
 
           </center>
@@ -93,9 +117,6 @@
   <div class="row">
 
 
-    <div class="col-md-4 ">
-      <br>
-  </div>
 </div>
   </div>
 
@@ -108,7 +129,7 @@
         map = new google.maps.Map(document.getElementById('map-container-google-12'), {
           center: { lat: 36.776214, lng: 3.058375 },
           disableDefaultUI: true,
-          zoom: 20,
+          zoom: 25,
           styles: [
   {
     "elementType": "geometry",
@@ -393,7 +414,7 @@
           var data = JSON.parse(this.responseText);
               for (var i = 0; i < data.length; i++) {
                 var infowindow = new google.maps.InfoWindow({
-content: "<div clase='card'><center> <span clase='badge badge-secondary'>"+data[i]["work_type"]+"</span></center>"+"username:"+data[i]["first_name"]+"<br>"+"last name:"+data[i]["last_name"]+"<br>"+"phone number:<a href='tel:0"+data[i]["phone_number"]+"'>0"+data[i]["phone_number"]+"</a></div>"
+content: "<div clase='card'><center><span clase='badge badge-secondary'>"+data[i]["work_type"]+"</span></center>"+"username:"+data[i]["first_name"]+"<br>"+"last name:"+data[i]["last_name"]+"<br>"+"phone number:<a href='tel:0"+data[i]["phone_number"]+"'>0"+data[i]["phone_number"]+"</a>"+"<br>"+"<a href='https://"+data[i]["facebook_messenger_url"]+"'>Messenger Contact</a>"+"</div>"
                 });
                   var lat = data[i]["longi"];
                   var lang = data[i]["lati"];
@@ -415,5 +436,74 @@ content: "<div clase='card'><center> <span clase='badge badge-secondary'>"+data[
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwmkgwnnu6l2ypPZdNVfYFtxSeEwNu9bg&callback=initMap"
     async defer></script>
+    <footer class="page-footer font-small blue pt-4">
+
+  <div class="container-fluid text-center text-md-left">
+
+    <div class="row">
+
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <h5 class="text-uppercase">Khdam Browser</h5>
+        <p>- The Best Place To Get Khdam </p>
+        <p>- The Best Place To Get Job </p>
+      </div>
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <div class="col-md-3 mb-md-0 mb-3">
+
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Or Add Khdam</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Edits</a>
+          </li>
+          <li>
+            <a href="#!">lite Mode</a>
+          </li>
+          <li>
+            <a href="#!">Copyright</a>
+          </li>
+          <li>
+            <a href="#!">Privacy Policy</a>
+          </li>
+        </ul>
+
+      </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">DevLinks</a>
+          </li>
+          <li>
+            <a href="#!">Bug Bounty</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Edits</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> khdam.com</a>
+  </div>
+
+</footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   </body>
 </html>
