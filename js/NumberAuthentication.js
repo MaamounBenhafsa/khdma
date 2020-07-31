@@ -1,32 +1,34 @@
-window.onload=function () {
-  render();
-};
-function render() {
-    window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
-    recaptchaVerifier.render();
-}
-function phoneAuth() {
-    //get the number
-    var number=document.getElementById('number').value;
-    //phone number authentication function of firebase
-    //it takes two parameter first one is number,,,second one is recaptcha
-    firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
-        //s is in lowercase
-        window.confirmationResult=confirmationResult;
-        coderesult=confirmationResult;
-        console.log(coderesult);
-        alert("Message sent");
-    }).catch(function (error) {
-        alert(error.message);
+var recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha');
+
+function auth(){
+
+    var number = '+82' + document.querySelector('input').value;
+  
+    firebase.auth().signInWithPhoneNumber(number, recaptcha).then( function(e) {
+        console.log('Phone Number');
+
+
+        var 
+            code = prompt('Put Phone Number Please', '');
+
+        
+        if(code === null) return;
+
+        
+        e.confirm(code).then(function (result) {
+            console.log('Confirmed', result.user);
+
+            document.querySelector('label').textContent += 'succes ' + result.user.phoneNumber;
+            
+        }).catch(function (error) {
+            console.error('Error', error);
+            
+        });
+
+    })
+    .catch(function (error) {
+        console.error('Error', error);
+
     });
-}
-function codeverify() {
-    var code=document.getElementById('verificationCode').value;
-    coderesult.confirm(code).then(function (result) {
-        alert("Successfully registered");
-        var user=result.user;
-        console.log(user);
-    }).catch(function (error) {
-        alert(error.message);
-    });
+  
 }
