@@ -107,13 +107,13 @@ height: 200px;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupbox"><i class="far fa-user pr-2" aria-hidden="true"></i>Signup As Khdam</button>
             </li>
             <li class="nav-item">
-                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="far fa-edit pr-2" aria-hidden="true"></i>Suggest E dits</button></a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact"><i class="far fa-edit pr-2" aria-hidden="true"></i>Suggest E dits</button>
             </li>
             <li class="nav-item">
-                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="far fa-envelope pr-2" aria-hidden="true"></i>Contact Us</button></a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact"><i class="far fa-envelope pr-2" aria-hidden="true"></i>Contact Us</button>
             </li>
             <li class="nav-item">
-                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>Pricing</button></a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pricing"><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>Pricing</button>
             </li>
         </ul>
     </div>
@@ -126,7 +126,7 @@ height: 200px;
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-body" id="signup">
+      <div class="modal-body" >
         <div class="card">
 
   <!-- Card image -->
@@ -155,6 +155,30 @@ height: 200px;
 
 
 
+<div class="modal fade animated slideInLeft" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><center>Contact Us Or Suggest Edits</center></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+<div class="embed-responsive embed-responsive-16by9 " >
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePKtu3csGP1S7V3i-KWNdUsY5qaF1dICVBwqsDhpkCazdLww/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+      </div>
+      <div class="modal-footer" >
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="modal fade animated slideInLeft" id="signupbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -166,18 +190,35 @@ height: 200px;
         </button>
       </div>
       <div class="modal-body" id="signup">
-        <h6>Enter Phone Number</h6>
-                <form>
-    <input type="number" id="number" placeholder="Phone Number" class="form-control mb-4">
-    <div id="recaptcha-container"></div>
-    <button class="btn btn-success" type="button" onclick="phoneAuth();">SendCode</button>
-</form><br>
-<h6>Enter Verification code</h6>
-<form>
-    <input type="text" id="verificationCode" placeholder="Enter verification code" class="form-control mb-4">
-    <button class="btn btn-warning" type="button" onclick="codeverify();">Verify code</button>
+<div class="embed-responsive embed-responsive-16by9 " >
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7wy7za5hLjsjAAQ4YGa8W8XWb18WRCXMkIpW6YMMIxzE_Lg/viewform?embedded=true" width="300" height="1397" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+      </div>
+      <div class="modal-footer" >
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-</form>
+
+
+
+<div class="modal fade animated slideInLeft" id="pricing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><center>Pricing</center></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+        <ul class="list-group">
+        <li class="list-group-item success-color">Free Account For 3 Months Starter</li>
+        <li class="list-group-item warning-color">500 Da / month</li>
+      </ul>
       </div>
       <div class="modal-footer" >
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -593,23 +634,6 @@ content: "<div clase='card'><center><span clase='badge badge-secondary'>"+data[i
     </div>
 
   </div>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC_04sX9ZaQ-_LF3FuLz9jVuvIz9oFYX7k",
-    authDomain: "khdma-d1868.firebaseapp.com",
-    databaseURL: "https://khdma-d1868.firebaseio.com",
-    projectId: "khdma-d1868",
-    storageBucket: "khdma-d1868.appspot.com",
-    messagingSenderId: "285844454391",
-    appId: "1:285844454391:web:a8c58724312d1a00c3ccf2",
-    measurementId: "G-6EZ1TCR7D0"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-<script src="js/app.js" type="text/javascript"></script>
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="#"> khdam.com</a>
   </div>
