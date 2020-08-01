@@ -5,6 +5,24 @@
     <title>Khadam Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="khadma is An app To Help The Kadam To Find Khdma By Publish Kadam Position And Contact information On A Map">
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -13,6 +31,9 @@
   <meta name="author" content="Mamoun Benhafsa">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
+      .bd{
+        background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);
+      }
       .map-container-5{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -64,7 +85,7 @@ height: 200px;
 }
     </style>
   </head>
-  <body class=" mdb-skin bg-skin-lp blue-grey-text" style="font-family: Courier New; color: #607d8b !important; background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);">
+  <body class="bd mdb-skin bg-skin-lp " >
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
@@ -77,29 +98,64 @@ height: 200px;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-               <a class="nav-link waves-effect waves-light" href="#">Home <span class="sr-only">(current)</span></a>
+               <a href="index.html"><button type="button" class="btn btn-primary" ><i class="fas fa-home pr-2" aria-hidden="true"></i>Home<span class="sr-only">(current)</span></button></a>
+            </li>
+          <li class="nav-item">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutus"><i class="fas fa-users pr-2" aria-hidden="true"></i>About Us</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupbox"> Signup As Khdam</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupbox"><i class="far fa-user pr-2" aria-hidden="true"></i>Signup As Khdam</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Suggest Edits</a>
+                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="far fa-edit pr-2" aria-hidden="true"></i>Suggest E dits</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Contact Us</a>
+                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="far fa-envelope pr-2" aria-hidden="true"></i>Contact Us</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Lite Mode</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
+                <a href="index.html"><button type="button" class="btn btn-primary" ><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>Pricing</button></a>
             </li>
         </ul>
     </div>
 </nav>
 
 
-<div class="modal fade" id="signupbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+
+<div class="modal fade animated slideInRight" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="signup">
+        <div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top img-fluid h-20" src="img/me.jpg"
+      alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <div class="card-body">
+
+    <h4 class="card-title">Mamoun Benhafsa</h4>
+    <p class="card-text">Web Devlopper / Design Security Resarcher , Simply I Love Tech Simply<br>Want To Know More About Me Go To 
+    <a href="#">My Protofile</a></p>
+
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade animated slideInLeft" id="signupbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -110,15 +166,16 @@ height: 200px;
         </button>
       </div>
       <div class="modal-body" id="signup">
+        <h6>Enter Phone Number</h6>
                 <form>
-    <input type="text" id="number" placeholder="+213********" class="form-control mb-4">
+    <input type="number" id="number" placeholder="Phone Number" class="form-control mb-4">
     <div id="recaptcha-container"></div>
-    <button class="btn" type="button" onclick="phoneAuth();">SendCode</button>
+    <button class="btn btn-success" type="button" onclick="phoneAuth();">SendCode</button>
 </form><br>
-<h1>Enter Verification code</h1>
+<h6>Enter Verification code</h6>
 <form>
     <input type="text" id="verificationCode" placeholder="Enter verification code" class="form-control mb-4">
-    <button class="btn" type="button" onclick="codeverify();">Verify code</button>
+    <button class="btn btn-warning" type="button" onclick="codeverify();">Verify code</button>
 
 </form>
       </div>
@@ -135,39 +192,38 @@ height: 200px;
 <br>
 <br>
 
-  <h2 class="section-heading h1 pt-2 mb-2 text-center text-white">Search For Khdam Online</h2>
+  <h2 class="section-heading h1 pt-2 mb-2 text-center text-light animated jello" >Search For Khdam Online</h2>
         <center>
-
-          <span class="badge badge-info">
+          <span class="badge badge-info animated lightSpeedIn">
             <img src="img/masson.png" class="img-fluid" alt="masson">
             <p>masson</p>
           </span>
 
-          <span class="badge badge-info">
+          <span class="badge badge-info animated lightSpeedIn">
             <img src="img/plumber.png" class="img-fluid" style="width: 32px ;" alt="plumber">
             <p>plumber</p>
           </span>
 
-          <span class="badge badge-info">
+          <span class="badge badge-info animated lightSpeedIn">
             <img src="img/pickup.png" class="img-fluid" style="width: 32px ;" alt="truck">
-            <p>mini pikup truck</p>
+            <p>truck</p>
           </span>
-
+          <span class="badge badge-info animated lightSpeedIn">
+            <img src="img/dyer.png" class="img-fluid" style="width: 32px ;" alt="dyer">
+            <p>dyer</p>
+          </span>
+          <span class="badge badge-info animated lightSpeedIn">
+            <img src="img/pickup.png" class="img-fluid" style="width: 32px ;" alt="mini truck">
+            <p>mini truck</p>
+          </span>
           </center>
           <button class="btn btn-primary dropdown-toggle mr-4" type="button" data-toggle="dropdown"
   aria-haspopup="true" aria-expanded="false">Search By Wilaya</button>
 
-<div class="dropdown-menu force-scroll" id="select_serach">
+<div class="dropdown-menu force-scroll " id="select_serach" >
 </div>
       <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 500px">
       </div>
-  <div class="container">
-  <div class="row">
-
-
-</div>
-  </div>
-
 
 </div>
 <script type="text/javascript">
@@ -496,7 +552,7 @@ content: "<div clase='card'><center><span clase='badge badge-secondary'>"+data[i
       <div class="col-md-3 mb-md-0 mb-3">
 
 
-        <ul class="list-unstyled">
+        <ul class="list">
           <li>
             <a href="#!">Home</a>
           </li>
@@ -521,7 +577,7 @@ content: "<div clase='card'><center><span clase='badge badge-secondary'>"+data[i
             <div class="col-md-3 mb-md-0 mb-3">
 
 
-        <ul class="list-unstyled">
+        <ul class="list">
           <li>
             <a href="#!">DevLinks</a>
           </li>
