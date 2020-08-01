@@ -1,3 +1,4 @@
+
 window.onload=function () {
   render();
 };
@@ -25,7 +26,7 @@ function codeverify() {
     coderesult.confirm(code).then(function (result) {
         alert("Successfully registered");
         var user=result.user;
-        console.log(user);
+        document.getElementById('signup').innerHTML = '<div class="embed-responsive embed-responsive-16by9"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7wy7za5hLjsjAAQ4YGa8W8XWb18WRCXMkIpW6YMMIxzE_Lg/viewform?embedded=true" width="300" height="1397" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>'
     }).catch(function (error) {
         alert(error.message);
     });
