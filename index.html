@@ -1,1 +1,568 @@
-<bold>Error</bold>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Khadam Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+      <meta charset="UTF-8">
+  <meta name="author" content="Mamoun Benhafsa">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      .map-container-5{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+              }
+  .map-container-5 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+              }
+      .my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+              }
+  .table-wrapper-scroll-y {
+  display: block;
+              }
+              .fa-1x {
+font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+cursor: pointer;
+}
+.dark-blue-text {
+color: #0A38F5;
+}
+.dark-pink-text {
+color: #AC003A;
+}
+.dark-amber-text {
+color: #ff6f00;
+}
+.dark-teal-text {
+color: #004d40;
+}
+.force-scroll {
+
+overflow-y: scroll;
+background-color: transparent;
+height: 200px;
+
+}
+.di{
+	background-color: transparent;
+}
+    </style>
+  </head>
+  <body class=" mdb-skin bg-skin-lp blue-grey-text" style="font-family: Courier New; color: #607d8b !important; background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);">
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+<nav class="navbar navbar-expand-md navbar-dark footer-copyright">
+    <a class="navbar-brand" href="#">Khdma Browser</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a class="nav-link waves-effect waves-light" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupbox"> Signup As Khdam</button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Suggest Edits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Lite Mode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="modal fade" id="signupbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><center>Signup</center></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                <form>
+    <input type="text" id="number" placeholder="+923********" class="form-control mb-4">
+    <div id="recaptcha-container"></div>
+    <button class="btn" type="button" onclick="phoneAuth();">SendCode</button>
+</form><br>
+<h1>Enter Verification code</h1>
+<form>
+    <input type="text" id="verificationCode" placeholder="Enter verification code" class="form-control mb-4">
+    <button class="btn" type="button" onclick="codeverify();">Verify code</button>
+
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+  <h2 class="section-heading h1 pt-2 mb-2 text-center text-white">Search For Khdam Online</h2>
+        <center>
+
+          <span class="badge badge-info">
+            <img src="img/masson.png" class="img-fluid" alt="masson">
+            <p>masson</p>
+          </span>
+
+          <span class="badge badge-info">
+            <img src="img/plumber.png" class="img-fluid" style="width: 32px ;" alt="plumber">
+            <p>plumber</p>
+          </span>
+
+          <span class="badge badge-info">
+            <img src="img/pickup.png" class="img-fluid" style="width: 32px ;" alt="truck">
+            <p>mini pikup truck</p>
+          </span>
+
+          </center>
+          <button class="btn btn-primary dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">Search By Wilaya</button>
+
+<div class="dropdown-menu force-scroll" id="select_serach">
+</div>
+      <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 500px">
+      </div>
+  <div class="container">
+  <div class="row">
+
+
+</div>
+  </div>
+
+
+</div>
+<script type="text/javascript">
+	function set_map_position(lat,long) {
+		map.setCenter({lat:lat, lng:long});
+		map.setZoom(8);
+	}
+	const wilaya = [{"id":"01","lat":26.418131,"lname":"Adrar","long":-0.6014717,"name":"Adrar"},{"id":"02","lat":36.1663328,"lname":" Chlef","long":1.3335514,"name":"Chlef"},{"id":"03","lat":33.8,"lname":" Laghouat","long":2.883333,"name":"Laghouat"},{"id":"04","lat":35.8775,"lname":"Oum El Bouaghi","long":7.1136111,"name":"Oum El Bouaghi"},{"id":"05","lat":35.55,"lname":" Batna","long":6.1666667,"name":"Batna"},{"id":"06","lat":36.75,"lname":" Béjaïa","long":5.0666667,"name":"Béjaïa"},{"id":"07","lat":34.85,"lname":" Biskra","long":5.7333333,"name":"Biskra"},{"id":"08","lat":31.608219,"lname":" Béchar","long":-2.220005,"name":"Béchar"},{"id":"09","lat":36.480499,"lname":" Blida","long":2.833905,"name":"Blida"},{"id":"10","lat":36.37763,"lname":" Bouira","long":3.8962348,"name":"Bouira"},{"id":"11","lat":24.0982893,"lname":" Tamanrasset","long":3.743509,"name":"Tamanrasset"},{"id":"12","lat":35.407139,"lname":" Tébessa","long":8.1208639,"name":"Tébessa"},{"id":"13","lat":34.8827758,"lname":" Tlemcen","long":-1.3166696,"name":"Tlemcen"},{"id":"14","lat":35.37849,"lname":" Tiaret","long":1.32569,"name":"Tiaret"},{"id":"15","lat":36.7166667,"lname":" Tizi Ouzou","long":4.05,"name":"Tizi Ouzou"},{"id":"16","lat":36.776214,"lname":"Alger","long":3.058375,"name":"Alger"},{"id":"17","lat":34.6666667,"lname":" Djelfa","long":3.25,"name":"Djelfa"},{"id":"18","lat":36.8,"lname":" Jijel","long":5.7666667,"name":"Jijel"},{"id":"19","lat":36.18898,"lname":" Sétif","long":5.414416,"name":"Sétif"},{"id":"20","lat":34.8333333,"lname":" Saïda","long":0.15,"name":"Saïda"},{"id":"21","lat":36.8666667,"lname":" Skikda","long":6.9,"name":"Skikda"},{"id":"22","lat":35.2022249,"lname":" Sidi Bel Abbès","long":-0.6298922,"name":"Sidi Bel Abbès"},{"id":"23","lat":36.902859,"lname":"Annaba","long":7.755543,"name":"Annaba"},{"id":"24","lat":36.4659,"lname":" Guelma","long":7.428361,"name":"Guelma"},{"id":"25","lat":36.35,"lname":" Constantine","long":6.6,"name":"Constantine"},{"id":"26","lat":36.2666667,"lname":" Médéa","long":2.75,"name":"Médéa"},{"id":"27","lat":35.939838,"lname":" Mostaganem","long":0.089767,"name":"Mostaganem"},{"id":"28","lat":35.70018,"lname":" M'Sila","long":4.545026,"name":"M'Sila"},{"id":"29","lat":35.400169,"lname":" Mascara","long":0.139852,"name":"Mascara"},{"id":"30","lat":31.96298,"lname":"Ouargla","long":5.342011,"name":"Ouargla"},{"id":"31","lat":35.6969444,"lname":"Oran","long":-0.6330556,"name":"Oran"},{"id":"32","lat":33.6802778,"lname":"El Bayadh","long":1.0202778,"name":"El Bayadh"},{"id":"33","lat":26.505,"lname":"Illizi","long":8.482222,"name":"Illizi"},{"id":"34","lat":36.0711916,"lname":" Bordj Bou Arreridj","long":4.7588042,"name":"Bordj Bou Arreridj"},{"id":"35","lat":36.7675962,"lname":" Boumerdès","long":3.7029002,"name":"Boumerdès"},{"id":"36","lat":36.7558581,"lname":"El Tarf","long":8.2212979,"name":"El Tarf"},{"id":"37","lat":27.6761012,"lname":" Tindouf","long":-8.1276526,"name":"Tindouf"},{"id":"38","lat":35.607778,"lname":" Tissemsilt","long":1.811111,"name":"Tissemsilt"},{"id":"39","lat":33.368309,"lname":"El Oued","long":6.867369,"name":"El Oued"},{"id":"40","lat":35.416667,"lname":" Khenchela","long":7.133333,"name":"Khenchela"},{"id":"41","lat":36.2863889,"lname":" Souk Ahras","long":7.9511111,"name":"Souk Ahras"},{"id":"42","lat":36.6178786,"lname":" Tipaza","long":2.3912362,"name":"Tipaza"},{"id":"43","lat":36.45,"lname":" Mila","long":6.25,"name":"Mila"},{"id":"44","lat":36.266667,"lname":"Aïn Defla","long":1.966667,"name":"Aïn Defla"},{"id":"45","lat":33.4350615,"lname":" Naâma","long":-0.9056623,"name":"Naâma"},{"id":"46","lat":35.30241,"lname":"Aïn Témouchent","long":-1.14489,"name":"Aïn Témouchent"},{"id":"47","lat":32.489059,"lname":" Ghardaïa","long":3.678539,"name":"Ghardaïa"},{"id":"48","lat":35.733333,"lname":" Relizane","long":0.55,"name":"Relizane"}]
+	
+	for (var i = 0; i < wilaya.length; i++) {
+		console.log();
+		document.getElementById("select_serach").innerHTML += ('<a class="dropdown-item di"><button class="btn btn-info" onclick="set_map_position('+wilaya[i]["lat"]+','+wilaya[i]["long"]+')">'+wilaya[i]["name"]+'</button></a>')
+	}
+</script>
+    <script>
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map-container-google-12'), {
+          center: { lat: 36.776214, lng: 3.058375 },
+          disableDefaultUI: true,
+          zoom: 8,
+          styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#1d2c4d"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8ec3b9"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1a3646"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#4b6878"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#64779e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.province",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#4b6878"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#334e87"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#023e58"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#283d6a"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#6f9ba5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1d2c4d"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#023e58"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#3C7680"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#304a7d"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#98a5be"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1d2c4d"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#2c6675"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#255763"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#b0d5ce"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#023e58"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#98a5be"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#1d2c4d"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#283d6a"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#3a4762"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#0e1626"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#4e6d70"
+      }
+    ]
+  }
+]
+        });
+ if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            map.setCenter(pos);
+          }, function() {
+          });
+        } else {
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var data = JSON.parse(this.responseText);
+              for (var i = 0; i < data.length; i++) {
+                var infowindow = new google.maps.InfoWindow({
+content: "<div clase='card'><center><span clase='badge badge-secondary'>"+data[i]["work_type"]+"</span></center>"+"username:"+data[i]["first_name"]+"<br>"+"last name:"+data[i]["last_name"]+"<br>"+"phone number:<a href='tel:0"+data[i]["phone_number"]+"'>0"+data[i]["phone_number"]+"</a>"+"<br>"+"<a href='https://"+data[i]["facebook_messenger_url"]+"'>Messenger Contact</a>"+"</div>"
+                });
+                  var lat = data[i]["longi"];
+                  var lang = data[i]["lati"];
+                  var latLng = new google.maps.LatLng(lat,lang);
+                var marker = new google.maps.Marker({
+                  position: latLng,
+                  icon: "img/"+data[i]["work_type"]+".png",
+                  map: map,
+                  title: data[i]["work_type"]
+              });
+                 marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+              });
+                window.setTimeout(() => {
+      				map.panTo(marker.getPosition());
+    			}, 5000);
+                marker.addListener("click", () => {
+    			map.setZoom(15);
+   				map.setCenter(marker.getPosition());
+  			});
+            }
+          }
+          };
+      xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+      xmlhttp.send();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwmkgwnnu6l2ypPZdNVfYFtxSeEwNu9bg&callback=initMap"
+    async defer></script>
+    <footer class="page-footer font-small blue pt-4">
+
+  <div class="container-fluid text-center text-md-left">
+
+    <div class="row">
+
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <h5 class="text-uppercase">Khdam Browser</h5>
+        <p>- The Best Place To Get Khdam </p>
+        <p>- The Best Place To Get Job </p>
+      </div>
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <div class="col-md-3 mb-md-0 mb-3">
+
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Or Add Khdam</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Edits</a>
+          </li>
+          <li>
+            <a href="#!">lite Mode</a>
+          </li>
+          <li>
+            <a href="#!">Copyright</a>
+          </li>
+          <li>
+            <a href="#!">Privacy Policy</a>
+          </li>
+        </ul>
+
+      </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">DevLinks</a>
+          </li>
+          <li>
+            <a href="#!">Bug Bounty</a>
+          </li>
+          <li>
+            <a href="#!">Suggest Edits</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_04sX9ZaQ-_LF3FuLz9jVuvIz9oFYX7k",
+    authDomain: "khdma-d1868.firebaseapp.com",
+    databaseURL: "https://khdma-d1868.firebaseio.com",
+    projectId: "khdma-d1868",
+    storageBucket: "khdma-d1868.appspot.com",
+    messagingSenderId: "285844454391",
+    appId: "1:285844454391:web:a8c58724312d1a00c3ccf2",
+    measurementId: "G-6EZ1TCR7D0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="app.js" type="text/javascript"></script>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> khdam.com</a>
+  </div>
+
+</footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  </body>
+</html>
