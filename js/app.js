@@ -29,11 +29,6 @@
 
 
 
-
-
-
-
-
 //none filter show all data from api
 //filter box :) Search
 function none_filter(){
@@ -82,6 +77,7 @@ function filter_place(){
     document.getElementById('search-filter').innerHTML = "";
     if (place == 'الولاية') {
       none_filter()
+    }
     if (filtered_place.length < 1) {
       document.getElementById('search-filter').innerHTML = '<div class="col-lg-3 col-md-6 mb-4" ><div class="card">'+ place+'  غير متوفر عمال في</div></div>'
     }
@@ -90,7 +86,7 @@ function filter_place(){
     document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><a href="" class="grey-text"><h2>'+filtered_place[i]["first_name"]+' '+filtered_place[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+"0658695089"+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+filtered_place[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+filtered_place[i]["wilaya_place"]+'<br>'+filtered_place[i]["commune"]+'</strong></h4></div></div></div>'
       }
         }
-      }
+      
     }
     };
     xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
@@ -100,6 +96,24 @@ function filter_place(){
 
 //filter by place wilay 
 function filter_place_w(filter_value){
+  if (filter_value=="masson") {
+    worker = 'بناء'
+  }
+  if (filter_value=="plumber") {
+    worker = 'ترصيص صحي'
+  }
+  if (filter_value=="dyer") {
+    worker = 'دهن'
+  }
+  if (filter_value=="truck_driver") {
+    worker = 'سائقي شاحنات'
+  }
+  if (filter_value=="mini_truck_driver") {
+    worker = 'سائقي شاحنات صغيرة'
+  }
+  if (filter_value=="buldozer_driver") {
+    worker = 'سائقي جرافات'
+  }
   var x = document.getElementById("select_serach").selectedIndex
   var place_w =document.getElementsByTagName("option")[x].value
   var xmlhttp = new XMLHttpRequest();
@@ -109,9 +123,15 @@ function filter_place_w(filter_value){
     var filtered = data.filter(a=>a.work_type==filter_value);
     var filtered_place = filtered.filter(a=>a.wilaya_place==place_w);
     document.getElementById('search-filter').innerHTML = "";
+
+    if (filtered_place.length < 1) {
+      document.getElementById('search-filter').innerHTML = '<div class="col-lg-3 col-md-6 mb-4"><div class="card"><h5> غير متوفر عمال ' +  worker +' في '+ place_w +'  <h5/></div></div>'
+    }
+    else{
     for (var i = 0; i < filtered_place.length; i++) {
     document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><a href="" class="grey-text"><h2>'+filtered_place[i]["first_name"]+' '+filtered_place[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+"0658695089"+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+filtered_place[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+filtered_place[i]["wilaya_place"]+'<br>'+filtered_place[i]["commune"]+'</strong></h4></div></div></div>'
       }
+    }
         }
     };
     xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
