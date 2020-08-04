@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="description" content="khadma is An app To Help The Kadam To Find Khdma By Publish Kadam Position And Contact information On A Map
-موقع khdma.online تم تطوير هدا التطبيق من اجل مكافحة البطالة بتوفير مناصب العمل عن طريق وضع معلومات عن اقرب عامل  امام الشخص الدي يريد البحث عن عامل 
-يربط بين العامل الحر كعامل الترصيص الصحي و الزبون الهدف هو توفير فرص العمل و القضاء على البطالة">
+				      موقع khdma.online هو موقع يربط بين العامل الحر كعامل الترصيص الصحي و الزبون الهدف هو توفير فرص العمل و القضاء على البطالة">
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
@@ -39,7 +38,11 @@
 	}
 .btnsmmmal{
 	width: 200px;	
+	height: 90px;
 	style="font-family: 'Tajawal';
+}
+.btnlaaarge{
+	max-width: 200px;
 }
 .force-scroll {
 
@@ -63,48 +66,59 @@ height: 300px;
 
 </head>
 <body class="bd" onload="none_filter()">
+
 <nav class="navbar navbar-expand-md navbar-dark footer-copyright">
     <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid" style="width: 80px;height: 80px;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-               <a href="index.html"><button type="button" class="btn btn-primary" ><i class="fas fa-home pr-2" aria-hidden="true"></i>الر ئيسية<span class="sr-only">(current)</span></button></a>
+               <a href="index.html"><button type="button" class="btn btn-primary btnlaaarge"  ><i class="fas fa-home pr-2" aria-hidden="true"></i>الر ئيسية<span class="sr-only">(current)</span></button></a>
             </li>
           <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutus"><i class="fas fa-users pr-2" aria-hidden="true"></i>من نحن</button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#aboutus"><i class="fas fa-users pr-2" aria-hidden="true"></i>من نحن</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupbox"><i class="far fa-user pr-2" aria-hidden="true"></i>ضع اسمك هنا ان كنت عامل </button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#signupbox"><i class="far fa-user pr-2" aria-hidden="true"></i>ضع اسمك هنا ان كنت عامل </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact"><i class="far fa-edit pr-2" aria-hidden="true"></i>ضع اقتراحاتك او انشغالاتك </button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#contact"><i class="far fa-edit pr-2" aria-hidden="true"></i>ضع اقتراحاتك او انشغالاتك </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact"><i class="far fa-envelope pr-2" aria-hidden="true"></i>اتصل بنا </button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#contact"><i class="far fa-envelope pr-2" aria-hidden="true"></i>اتصل بنا </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pricing"><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>الاسعار</button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#pricing"><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>الاسعار</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#help"><i class="fas fa-question pr-2" aria-hidden="true"></i>المساعدة</button>
+                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#help"><i class="fas fa-question pr-2" aria-hidden="true"></i>المساعدة</button>
             </li>
         </ul>
     </div>
 </nav>
-  <br>
-  <br>
-  <br>
-  <br>
+<br>
+<div class="row justify-content-md-center">
+	    <div class="col-12 col-md-auto">
+	    	<center>
+	   <div class="jumbotron text-center h-50 w-100 text-light" style="background-color: transparent;">
+	   	<h1 class="title"> اعثر على خدام دون عناء التنقل و البحث</h1>
+	   	<div class="card" style="height: 40px;"> 
+	   	<h2 style="height: 7px;" class="text-primary">Khadam<i class="fab fa-searchengin "></i></h1>
+	   	</div>
+</div>
+</center>
+
+    </div>
+</div>
   <main>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark lighten-3 mt-3 mb-5" style="background-color: transparent;">
         <span class="navbar-brand text-right" style=""></span>
         <button class="navbar-toggler btn btn-info btn-lg" type="button" data-toggle="collapse" data-target="#nav-secend" aria-controls="nav-secend"
           aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>العمال المتوفرين
+          <span class="navbar-toggler-icon"></span>بحث و فلترة
         </button>
 
 <div class="row wow fadeIn collapse navbar-collapse" id="nav-secend">
@@ -116,21 +130,21 @@ height: 300px;
 <div class="col-lg-3 col-md-6 mb-4">
 				
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('masson');" id="btn0"> 
-					<img src="img/masson.png" class="img-fluid" alt="masson">
+					<img src="img/masson.png" class="img-fluid" alt="maçon">
 					<h5 class="font-weight-bold blue-text" >بناء</h5>
 				</button>
 
 </div>
 <div class="col-lg-3 col-md-6 mb-4">
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('plumber');" id="btn1">
-					<img src="img/plumber.png" class="img-fluid" alt="builder">
-					<h5 class="font-weight-bold blue-text" >ترصيص صحي</h5>
+					<img src="img/plumber.png" class="img-fluid" alt="plumber">
+					<h5 class="font-weight-bold blue-text" >سباك</h5>
 				</button>
 
 </div>
 <div class="col-lg-3 col-md-6 mb-4">
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('dyer');" id="btn2">
-					<img src="img/dyer.png" class="img-fluid" alt="builder">
+					<img src="img/dyer.png" class="img-fluid" alt="dyer">
 					<h5 class="font-weight-bold blue-text" >دهان</h5>
 				</button>
 
@@ -155,6 +169,12 @@ height: 300px;
 					<h5 class="font-weight-bold blue-text" >سائق جرافة</h5>
 				</button>
 
+</div>
+<div class="col-lg-3 col-md-15 mb">
+					<button class="btn btn-info btnsmmmal" onclick="filter_place_w('electrician')" id="btn6">
+					<img src="img/electrician.png" class="img-fluid" alt="electrician  ">
+					<h5 class="font-weight-bold blue-text" >كهربائي</h5>
+				</button>
 </div>
 <div class="col-lg-3 col-md-15 mb-4">
 				<button class="btn btn-info btnsmmmal" onclick="filter_place();" id="btn6">
@@ -191,7 +211,9 @@ height: 300px;
 
 	</p>
   </div>
-
+      <div class="modal-footer" >
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
 </div>
       </div>
     </div>
@@ -224,30 +246,27 @@ height: 300px;
 
 
 
-<div class="modal fade animated slideInLeft" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade right h-100 w-100" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+  <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+
+
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><center>اتصل بنا او ضع اقتراحاتك</center></h5>
+        <h4 class="modal-title w-100 h-100" id="myModalLabel">اتصل بنا او ضع اقتراحاتك</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body" >
-<div class="embed-responsive embed-responsive-16by9 " >
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePKtu3csGP1S7V3i-KWNdUsY5qaF1dICVBwqsDhpkCazdLww/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-      </div>
-      <div class="modal-footer" >
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
+      <div class="modal-body">
+          <iframe class="iframe h-100 w-100" src="https://docs.google.com/forms/d/e/1FAIpQLSePKtu3csGP1S7V3i-KWNdUsY5qaF1dICVBwqsDhpkCazdLww/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>      </div>
+      <div class="modal-footer justify-content-center">
     </div>
   </div>
 </div>
-
-
-
+</div>
 
 
 <div class="modal fade animated slideInLeft" id="ppy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -306,14 +325,14 @@ height: 300px;
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><center>قائمة الاسعار</center></h5>
+        <h5 class="modal-title" id="exampleModalLabel"><center>قائمو الاسعار</center></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body" >
         <ul class="list-group">
-        <li class="list-group-item success-color">حساب مجاني لمدة 3 اشهر كبداية</li>
+        <li class="list-group-item success-color">حساب مجاني لمدو 3 اشهر كبدايو</li>
         <li class="list-group-item warning-color">500 Da / month</li>
       </ul>
       </div>
@@ -381,22 +400,6 @@ height: 300px;
       <a href="" target="_blank">  </a>
     </div>
   </footer>
-  <script>
-  	var btn = $('#button');
-
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
-    </script>
 	<script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
