@@ -1,7 +1,8 @@
-//Mamoun Benhafsa Khdama Web Application 
-//Mon 03 Aug 2020
-// All Copyright  Reserved For Me
-
+/**Mamoun Benhafsa Khdama Web Application 
+Mon 03 Aug 2020
+All Copyright  Reserved For Me
+Please Respect My Work :)
+*/
 
 
 
@@ -65,7 +66,7 @@ function none_filter(){
       }   
     }
     for (var i = 0; i < data.length; i++) {
-    document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><h1><span class="badge  badge-primary">'+data[i]["work_type"]+'</span></h1><h2>'+data[i]["first_name"]+'  '+data[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+"0658695089"+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+data[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+data[i]["wilaya_place"]+'<br>'+data[i]["commune"]+'</strong></h4></div></div></div>'
+    document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><h1><span class="badge  badge-primary">'+data[i]["work_type"]+'</span></h1><h2>'+data[i]["first_name"]+'  '+data[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+"0658695089"+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+data[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+data[i]["wilaya_place"]+'<br>'+data[i]["commune"]+'</strong></h4><a href="http://'+data[i]["facebook_messenger_url"]+'" target="_blank"><img src="img/messenger.png" class="img img-fluid"></img></a></div></div></div>'
       }
     }
     };
