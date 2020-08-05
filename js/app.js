@@ -27,7 +27,6 @@
 
 
 
-
 document.getElementById('search-filter').innerHTML = '<center><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div> جاري التحميل ....</center>'
 
 
@@ -41,6 +40,30 @@ function none_filter(){
   if (this.readyState == 4 && this.status == 200) {
     var data = JSON.parse(this.responseText);
     document.getElementById('search-filter').innerHTML = "";
+    //replaceByValue('work_type','masson','بناء')
+    for( var i = 0; i < data.length; ++i ) {
+      if( 'masson' == data[i]["work_type"] ) {
+          data[i]["work_type"] = 'بناء' ;
+      }
+      if ('plumber' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سباك'
+      }
+      if ('dyer' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'دهان'
+      }
+      if ('truck_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق شاحنة'
+      }
+      if ('mini_truck_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق شاحنة صغيرة'
+      }
+      if ('buldozer_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق جرافة'
+      }   
+      if ('electrician' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'كهربائي'
+      }   
+    }
     for (var i = 0; i < data.length; i++) {
     document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><h1><span class="badge  badge-primary">'+data[i]["work_type"]+'</span></h1><h2>'+data[i]["first_name"]+'  '+data[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+"0658695089"+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+data[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+data[i]["wilaya_place"]+'<br>'+data[i]["commune"]+'</strong></h4></div></div></div>'
       }
@@ -113,7 +136,7 @@ function filter_place_w(filter_value){
     worker = 'ترصيص صحي'
   }
   if (filter_value=="dyer") {
-    worker = 'دهن'
+    worker = 'دهان'
   }
   if (filter_value=="truck_driver") {
     worker = 'سائقي شاحنات'
