@@ -73,6 +73,7 @@ function none_filter(){
     xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
     xmlhttp.send();
 }
+//https://khdma-d1868.firebaseio.com/aa.json
 
 
 //filter by worker type
@@ -112,9 +113,31 @@ function filter_place(){
       document.getElementById('search-filter').innerHTML = '<div class="col-lg-3 col-md-6 mb-4" ><div class="card">'+ place+'  غير متوفر عمال في</div></div>'
     }
     else{
+          for( var i = 0; i < data.length; ++i ) {
+      if( 'masson' == data[i]["work_type"] ) {
+          data[i]["work_type"] = 'بناء' ;
+      }
+      if ('plumber' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سباك'
+      }
+      if ('dyer' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'دهان'
+      }
+      if ('truck_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق شاحنة'
+      }
+      if ('mini_truck_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق شاحنة صغيرة'
+      }
+      if ('buldozer_driver' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'سائق جرافة'
+      }   
+      if ('electrician' == data[i]["work_type"]) {
+          data[i]["work_type"] = 'كهربائي'
+      }   
+    }
     for (var i = 0; i < filtered_place.length; i++) {
-
-    document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><h1><span class="badge  badge-primary">'+filter_place[i]["work_type"]+'</span></h1><a href="" class="grey-text">'+filtered_place[i]["first_name"]+' '+filtered_place[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+filter_place[i]["phone_number"]+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+filtered_place[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+filtered_place[i]["wilaya_place"]+'<br>'+filtered_place[i]["commune"]+'</strong></h4><a href="http://'+filter_place[i]["facebook_messenger_url"]+'" target="_blank"><img src="img/messenger.png" class="img img-fluid"></img></a></div></div></div>'
+    document.getElementById('search-filter').innerHTML += '<div class="col-lg-3 col-md-6 mb-4" ><div class="card"><div class="view overlay"><a><div class="mask rgba-white-slight"></div></a></div><div class="card-body text-center"><h1><span class="badge  badge-primary">'+filtered_place[i]["work_type"]+'</span></h1><a href="" class="grey-text">'+filtered_place[i]["first_name"]+' '+filtered_place[i]["last_name"]+'</h2></a><h5><strong><a href="tel:'+filtered_place[i]["phone_number"]+'" class="dark-grey-text"><img src="img/phone.png" style="width: 34px">  0'+filtered_place[i]["phone_number"]+'</a></strong></h5><h4 class="font-weight-bold blue-text"><strong>'+filtered_place[i]["wilaya_place"]+'<br>'+filtered_place[i]["commune"]+'</strong></h4><a href="http://'+filtered_place[i]["facebook_messenger_url"]+'" target="_blank"><img src="img/messenger.png" class="img img-fluid"></img></a></div></div></div>'
       }
         }
       
