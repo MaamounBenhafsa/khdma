@@ -160,7 +160,7 @@ function filter_place_w(filter_value){
     worker = 'بناء'
   }
   if (filter_value=="plumber") {
-    worker = 'سبلك'
+    worker = 'سباك'
   }
   if (filter_value=="dyer") {
     worker = 'دهان'
