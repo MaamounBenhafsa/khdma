@@ -78,6 +78,7 @@ function none_filter(){
 
 //filter by worker type
 function filter(filter_value){
+  document.getElementById("search-filter").scrollIntoView();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     document.getElementById('search-filter').innerHTML = '<center><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div> جاري التحميل ....</center>'
@@ -97,6 +98,7 @@ function filter(filter_value){
 
 //filter by place 
 function filter_place(){
+  document.getElementById("search-filter").scrollIntoView();
   var x = document.getElementById("select_serach").selectedIndex
   var place =document.getElementsByTagName("option")[x].value
   var xmlhttp = new XMLHttpRequest();
@@ -153,6 +155,7 @@ function filter_place(){
 
 //filter by place wilay 
 function filter_place_w(filter_value){
+  document.getElementById("search-filter").scrollIntoView();
   if (filter_value=="masson") {
     worker = 'بناء'
   }
@@ -201,6 +204,7 @@ function filter_place_w(filter_value){
 
 
 function filter_place_c(filter_value){
+  document.getElementById("search-filter").scrollIntoView();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     document.getElementById('search-filter').innerHTML = '<center><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div> جاري التحميل ....</center>'
