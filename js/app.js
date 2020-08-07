@@ -160,19 +160,19 @@ function filter_place_w(filter_value){
     worker = 'بناء'
   }
   if (filter_value=="plumber") {
-    worker = 'ترصيص صحي'
+    worker = 'سبلك'
   }
   if (filter_value=="dyer") {
     worker = 'دهان'
   }
   if (filter_value=="truck_driver") {
-    worker = 'سائقي شاحنات'
+    worker = 'سائقي شاحنة'
   }
   if (filter_value=="mini_truck_driver") {
-    worker = 'سائقي شاحنات صغيرة'
+    worker = 'سائق شاحنة صغيرة'
   }
   if (filter_value=="buldozer_driver") {
-    worker = 'سائقي جرافات'
+    worker = 'سائق جرافة'
   }
   if (filter_value=="electrician") {
     worker = 'كهرباء '
