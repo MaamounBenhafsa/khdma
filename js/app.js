@@ -227,7 +227,7 @@ function filter_place_w(filter_value){
     worker = 'سائق جرافة'
   }
   if (filter_value=="electrician") {
-    worker = 'كهرباءي'
+    worker = 'كهربائي'
   }
   var x = document.getElementById("select_serach").selectedIndex
   var place_w =document.getElementsByTagName("option")[x].value
