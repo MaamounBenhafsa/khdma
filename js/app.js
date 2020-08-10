@@ -95,7 +95,7 @@ function none_filter(){
       }
     }
     };
-    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khadama.json", true);
     xmlhttp.send();
 }
 
@@ -122,7 +122,7 @@ function filter(filter_value){
       }
         }
     };
-    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khadama.json", true);
         xmlhttp.send();
 }
 
@@ -192,7 +192,7 @@ function filter_place(){
     xmlhttp.onprogress = (event) => {
       document.getElementById('search-filter').innerHTML = '<center><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div> جاري التحميل ....</center>'
     }
-    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khadama.json", true);
         xmlhttp.send();
 }
 
@@ -251,7 +251,7 @@ function filter_place_w(filter_value){
     }
         }
     };
-    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khadama.json", true);
         xmlhttp.send();
 }
 
@@ -282,6 +282,6 @@ function filter_place_c(filter_value){
     }
         }
     };
-    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khdama.json", true);
+    xmlhttp.open("GET", "https://khdma-d1868.firebaseio.com/Khadama.json", true);
         xmlhttp.send();
 }
