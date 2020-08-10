@@ -25,6 +25,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -48,15 +49,6 @@
 	height: 90px;
 	style="font-family: 'Tajawal';
 }
-.btnlaaarge{
-	max-width: 200px;
-}
-.force-scroll {
-
-overflow-y: scroll;
-
-height: 300px;
-}
 .bd {
    background: linear-gradient(120deg, #123962, #2754ba, #00aee6, #799eb2, #b1d4e5);
 }
@@ -70,6 +62,7 @@ height: 300px;
 
   gtag('config', 'UA-151957773-1');
 </script>
+
 </head>
 	
 <script>
@@ -93,7 +86,12 @@ height: 300px;
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-	
+<script type="text/javascript">
+    $(window).on('load',function(){
+       $('#cookiemodal').modal('show');
+      setTimeout(function(){ $('#promomodal').modal('show'); }, 5000);
+    });
+</script>
 <body class="bd" onload="none_filter()">
 
 <nav class="navbar navbar-expand-md navbar-dark footer-copyright">
@@ -119,14 +117,12 @@ height: 300px;
                 <a href="contact.html"  target="_blank" class="btn btn-primary btnlaaarge"><i class="far fa-envelope pr-2" aria-hidden="true"></i>اتصل بنا</a>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#pricing"><i class="fas fa-dollar-sign pr-2" aria-hidden="true"></i>الاسعار</button>
-            </li>
-            <li class="nav-item">
                 <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#help"><i class="fas fa-question pr-2" aria-hidden="true"></i>المساعدة</button>
             </li>
         </ul>
     </div>
 </nav>
+
 <br>
 <div class="row justify-content-md-center">
 	    <div class="col-12 col-md-auto">
@@ -215,7 +211,47 @@ height: 300px;
   </nav>
 
 
-<a id="button"></a>
+<div class="modal fade bottom" id="cookiemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true" data-backdrop='false'>
+  <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+         بالنقر فوق "اوافق" ، فإنك توافق على تخزين ملفات تعريف الارتباط على جهازك لتحسين التنقل في الموقع ، وتحليل استخدام الموقع ، والمساعدة في جهودنا التسويقية.
+         <br>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">اوافق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="promomodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="font-size: 20px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        سجل الان و 
+        احصل على حساب مجاني لمدة 3 اشهر 
+        ,زد فرصة عملك
+        <br>
+         <br>
+        <br>
+        <br>   
+      </div>
+      <div class="modal-footer">
+       <a href="signup.html" target="_blank" class="text-light btn btn-primary" style="font-size: 20px;">سجل كعامل</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade animated slideInRight" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -434,11 +470,11 @@ height: 300px;
   <div class="footer-copyright text-center py-3">
     <a class="btn-floating btn-lg btn-tw" type="button" role="button" href="https://www.facebook.com/khadamsearch" target="_blank"><i class="fab fa-facebook"></i></a>
           <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Khadam  <i class="fab fa-searchengin "></i></p>
-      <a href="" target="_blank">  </a>
   </div>
   <!-- Copyright -->
 </footer>
 	<script type="text/javascript" src="js/app.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
