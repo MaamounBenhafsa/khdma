@@ -5,7 +5,7 @@ Please Respect My Work :)
 */
 
 //var urldataapi="https://khdma-d1868.firebaseio.com/Khdama.json"
-var urldataapi="https://khdma-d1868.firebaseio.com/Khadama.json"
+var urldataapi="https://khdma-d1868.firebaseio.com/Khdama.json"
 
 
 
