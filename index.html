@@ -63,12 +63,6 @@
 
   gtag('config', 'UA-151957773-1');
 </script>
-<script type="text/javascript"> 
-$(window).on('load',function(){ 
-$('#cookiemodal').modal('show'); 
-$('#promomodal').modal('show');
-}); 
-
 </head>
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
@@ -95,6 +89,12 @@ $('#promomodal').modal('show');
   logged_in_greeting="مرحبا كيف نستطيع مساعدتك"
   logged_out_greeting="مرحبا كيف نستطيع مساعدتك">
       </div>
+	<script type="text/javascript">
+    $(window).on('load',function(){
+       $('#cookiemodal').modal('show');
+      setTimeout(function(){ $('#promomodal').modal('show'); }, 2000);
+    });
+</script>
 <body class="bd" onload="none_filter()">
 
 <nav class="navbar navbar-expand-md navbar-dark footer-copyright">
