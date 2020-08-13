@@ -28,8 +28,7 @@
 <meta name="theme-color" content="#3DADF2">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
       <meta charset="UTF-8">
@@ -44,15 +43,12 @@
 <style type="text/css">
 	body{
 		font-family: 'Cairo';
+    background:  linear-gradient(-120deg, rgb(2, 27, 121), rgb(5, 117, 230), rgb(32, 94, 155));
+
 	}
 .btnsmmmal{
 	width: 200px;	
 	height: 90px;
-	style="font-family: 'Tajawal';
-}
-.bd {
-  background:  linear-gradient(-120deg, rgb(2, 27, 121), rgb(5, 117, 230), rgb(32, 94, 155));
-	
 }
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -96,6 +92,11 @@
       setTimeout(function(){ $('#promomodal').modal('show'); }, 2000);
     });
 </script>
+<script>
+        $('.navbar-collapse button').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
 <body class="bd" onload="none_filter()">
 
 <nav class="navbar navbar-expand-md navbar-dark footer-copyright">
@@ -151,11 +152,15 @@
         </button>
 
 <div class="row wow fadeIn collapse navbar-collapse" id="nav-secend">
+
 	<div class="col-lg-3 col-md-6 mb-4">
-	<select class="browser-default custom-select dropdown-menu  " id="select_serach">
+
+	<select class="form-control" id="select_serach" style="align-content: right;">
 		  <option selected> الولاية</option>
 	</select>
+
 	</div>
+
 <div class="col-lg-3 col-md-6 mb-4">
 				
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('masson');" id="btn0"> 
@@ -180,15 +185,15 @@
 </div>
 <div class="col-lg-3 col-md-6 mb-4">
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('truck_driver');" id="btn3">
-					<img src="img/truck.png" style="width: 30px" class="img-fluid" alt="builder">
-					<h5 class="font-weight-bold blue-text" >سائق شاحنة</h5>
+					<img src="img/truck.png"  class="img-fluid" alt="builder">
+					<h5 class="font-weight-bold blue-text" >سائق شاحنة وزن ثقيل</h5>
 				</button>
 
 </div>
 <div class="col-lg-3 col-md-15 mb-4">
 				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('mini_truck_driver');" id="btn4">
 					<img src="img/mini-truck.png" class="img-fluid" alt="builder">
-					<h5 class="font-weight-bold blue-text" >سائق شاحنة صغيرة</h5>
+					<h5 class="font-weight-bold blue-text" >سائق شاحنة وزن حفيف</h5>
 				</button>
 
 </div>
@@ -433,21 +438,6 @@
 
     <!-- Grid row -->
     <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 style="height: 7px;" >Khadam<i class="fab fa-searchengin "></i></h5>
-        <br>
-        <p> اعثر على خدام دون عناء التنقل و البحث</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
 
         <!-- Links -->
@@ -469,6 +459,21 @@
         </ul>
 
       </div>
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 style="height: 7px;" >Khadam<i class="fab fa-searchengin "></i></h5>
+        <br>
+        <p> اعثر على خدام دون عناء التنقل و البحث</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+
     </div>
   </div>
   <div class="footer-copyright text-center py-3">
@@ -482,6 +487,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+
 </body>
 </html>
