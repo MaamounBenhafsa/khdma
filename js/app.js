@@ -4,7 +4,6 @@ All Copyright  Reserved For Me
 Please Respect My Work :)
 */
 
-//var urldataapi="https://khdma-d1868.firebaseio.com/Khdama.json"
 var urldataapi="https://khdma-d1868.firebaseio.com/Khdama.json"
 
 
@@ -78,10 +77,10 @@ function none_filter(){
           data[i]["work_type"] = 'دهان'
       }
       if ('truck_driver' == data[i]["work_type"]) {
-          data[i]["work_type"] = 'سائق شاحنة'
+          data[i]["work_type"] = 'سائق شاحنة <br> وزن ثقيل'
       }
       if ('mini_truck_driver' == data[i]["work_type"]) {
-          data[i]["work_type"] = 'سائق شاحنة صغيرة'
+          data[i]["work_type"] = 'سائق شاحنة <br> وزن خفيف'
       }
       if ('buldozer_driver' == data[i]["work_type"]) {
           data[i]["work_type"] = 'سائق جرافة'
@@ -170,10 +169,10 @@ function filter_place(){
           data[i]["work_type"] = 'دهان'
       }
       if ('truck_driver' == data[i]["work_type"]) {
-          data[i]["work_type"] = 'سائق شاحنة'
+          data[i]["work_type"] = 'سائق شاحنة <br> وزن ثقيل'
       }
       if ('mini_truck_driver' == data[i]["work_type"]) {
-          data[i]["work_type"] = 'سائق شاحنة صغيرة'
+          data[i]["work_type"] = 'سائق شاحنة <br> وزن خفيف'
       }
       if ('buldozer_driver' == data[i]["work_type"]) {
           data[i]["work_type"] = 'سائق جرافة'
@@ -219,10 +218,10 @@ function filter_place_w(filter_value){
     worker = 'دهان'
   }
   if (filter_value=="truck_driver") {
-    worker = 'سائقي شاحنة'
+    worker = 'سائق شاحنة <br> وزن ثقيل'
   }
   if (filter_value=="mini_truck_driver") {
-    worker = 'سائق شاحنة صغيرة'
+    worker = 'سائق شاحنة <br> وزن خفيف'
   }
   if (filter_value=="buldozer_driver") {
     worker = 'سائق جرافة'
