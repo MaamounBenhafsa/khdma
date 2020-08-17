@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html >
 <head>
-	<title>شروط الاستخدام</title>
-	<meta charset="utf-8">
+  <title>Khdma Online</title>
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="description" content="khadma is An app To Help The Kadam To Find Khdma By Publish Kadam Position And Contact information On A Map
-				      موقع khdma.online هو موقع يربط بين العامل الحر كعامل الترصيص الصحي و الزبون الهدف هو توفير فرص العمل و القضاء على البطالة">
+              موقع khdma.online هو موقع يربط بين العامل الحر كعامل الترصيص الصحي و الزبون الهدف هو توفير فرص العمل و القضاء على البطالة">
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
@@ -23,25 +23,28 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#3DADF2">
+<link rel="manifest" href="manifest.json">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
       <meta charset="UTF-8">
-  <meta name="author" content="Mamoun Benhafsa">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Mamoun Benhafsa">
 <meta property="og:image" content="https://khadam.online/img/banner.png" />
 <meta property="og:url" content="https://khadam.online" />
 <meta property="og:title" content="Khadma Online " />
-	<meta property="og:type" content="website"/>
+  <meta property="og:type" content="website"/>
 <meta property="og:description" content="اعثر على خدام دون عناء التنقل و البحث 
-					 ان كنت خدام زد فرصة عملك و ضع اسمك" /> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+           ان كنت خدام زد فرصة عملك و ضع اسمك" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style type="text/css">
-		body{
-		font-family: 'Cairo';
-	}
+  body{
+    font-family: 'Cairo';
+
+  }
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151957773-1"></script>
@@ -53,52 +56,62 @@
   gtag('config', 'UA-151957773-1');
 </script>
 </head>
-	<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '{326813405366540}',
-      cookie     : true,
-      xfbml      : true,
-      version    : '{8.0}'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-	
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="123785022468297"
+  logged_in_greeting="مرحبا كيف نستطيع مساعدتك"
+  logged_out_greeting="مرحبا كيف نستطيع مساعدتك">
+      </div>
+<script>
+        $('.navbar-collapse button').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
 <body>
-	<br>
-	<center><h1>شروط الاستخدام</h1></center>
-	<blockquote class="blockquote">
-  <p class="mb-0 text-right" >07 / 08 / 2020 في</p>
+  <br>
+  <center><h1>شروط الاستخدام</h1></center>
+  <blockquote class="blockquote">
+  <p class="mb-0 " >07 / 08 / 2020 في</p>
 </blockquote>
-	<blockquote class="blockquote ">
-    <p class="bq-title  text-right" > :الطرفان </p>
+  <blockquote class="blockquote ">
+    <p class="bq-title  " > :الطرفان </p>
     <p style="text-align: right;">
-    	khadam.online  الطرف الأول : شركة     
-    	<br>
+      khadam.online  الطرف الأول : شركة     
+      <br>
 العامل الذي يملك حساب على موقع khadam.online : الطرف الثاني 
 <br>
  khadam.online الطرف الثالث : المتصفح في الموقع 
+ <br>
+       الطرف الرابع  : مستخدم نظام الاحالة
     </p>
-    <p style="text-align: right;" class="h1 bold">
-    	<strong>
-بمجرد تسجيل حسابكم على الموقع  يُعتبر الطرف الثاني (العامل) موافقا على الشروط المدرجة في هذا العقد و يُعتبر هذا العقد إلزاميا لكلا الطرفين فور فتح الحساب.
+    <p  class="h1 bold">
+      <strong>
+.بمجرد تسجيل حسابكم على الموقع  يُعتبر الطرف الثاني (العامل) موافقا على الشروط المدرجة في هذا العقد و يُعتبر هذا العقد إلزاميا لكلا الطرفين فور فتح الحساب
     </strong>
     </p>
   </blockquote>
-  	<blockquote class="blockquote ">
-    <p class="bq-title text-right lead"  > : البنود </p>
-    <p class="text-right">
+    <blockquote class="blockquote ">
+    <p class="bq-title  lead"  > : البنود </p>
+    <p class="">
 البنود
 <br>
 الخصوصية
@@ -112,7 +125,7 @@
 البند 2 : يتحمل الطرفان الأخطاء التقنية التي يرتكبانها.
 <br>
 <br>
-البند 3 : للطرف الاول الحق في غلق الحسابات المنتهية الصلاحية و التي لم تدفع رسوم الاشتراك الشهري و المقدرة ب 500 دج لكل شهرين 
+البند 3 : للطرف الاول الحق في غلق الحسابات المنتهية الصلاحية و التي لم تدفع رسوم الاشتراك 
 <br>
 <br>
 البند 4 : للطرف الأول  الحق في غلق الحسابات المخالفة لشروط الاستخدام أو لقواعد الاحترام المتبادل العامة.
@@ -130,8 +143,25 @@
 البند 7 : للطرف الثاني الحق في الاستفادة بحساب مجاني لمدة 3 اشهر كتجربة للموقع
     </p>
   </blockquote>
+      <blockquote class="blockquote text-success">
+    <p class="bq-title  lead"  > : الاحالة </p>
+      <blockquote class="blockquote">
+  <p class="mb-0 " >17 / 08 / 2020 في</p>
+</blockquote>
+    البند 1 : للطرف الرابع الحق في الحصول على رمز الاحالة مرة واحدة طيلة فترة تسجيله
+    <br>
+    البند 2 : يحصل الطرف الرابع على نقطة واحدة لكل  عامل يسجل عن طريق رمز الاحالة الخاص به
+    <br>
+    البند 3 : كل نقطة تعتبر 50 دج 
+    <br>
+    البند 4 : ادنى عملية دفع للطرف الرابع هي 20 نقطة اي 1000 دج
+    <br>
+    البند 5 : يتم الدفع للطرف الرابع عندما يسجل 20 عامل الخاص به اول اشتراك و لا يهم نوع الاشتراك
+  </blockquote>
+  <br>
   <footer class="text-center">
-  	khadam.online © 2020
+    khadam.online © 2020
   </footer>
 </body>
-</head>
+</body>
+</html>
