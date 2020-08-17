@@ -98,9 +98,8 @@
             $(".navbar-collapse").collapse('hide');
         });
     </script>
-
-<body class="bd" onload="none_filter()">
-<nav class="navbar navbar-expand-md navbar-dark footer-copyright">
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark footer-copyright">
     <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid" style="width: 80px;height: 80px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -123,107 +122,11 @@
                 <a href="contact.html"  target="_blank" class="btn btn-primary btnlaaarge"><i class="far fa-envelope pr-2" aria-hidden="true"></i>اتصل بنا</a>
             </li>
             <li class="nav-item">
-                <a href="pricing.html"  target="_blank" class="btn btn-primary btnlaaarge"><i class="far fa-envelope pr-2" aria-hidden="true"></i>الاسعار</a>
-            </li>
-            <li class="nav-item">
                 <button type="button" class="btn btn-primary btnlaaarge" data-toggle="modal" data-target="#help"><i class="fas fa-question pr-2" aria-hidden="true"></i>المساعدة</button>
             </li>
         </ul>
     </div>
 </nav>
-
-<br>
-<div class="row justify-content-md-center">
-	    <div class="col-12 col-md-auto">
-	    	<center>
-	   <div class="jumbotron text-center h-50 w-100 text-light" style="background-color: transparent;">
-	   	<h1 class="title"> اعثر على خدام دون عناء التنقل و البحث</h1>
-	   	<div class="card" style="height: 40px;"> 
-	   	<h2 style="height: 7px;" class="text-primary">Khadam<i class="fab fa-searchengin "></i></h2>
-	   	</div>
-</div>
-</center>
-
-    </div>
-</div>
-  <main>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark lighten-3 mt-3 mb-5" style="background-color: transparent;">
-        <span class="navbar-brand text-right" style=""></span>
-        <button class="navbar-toggler btn btn-info btn-lg" type="button" data-toggle="collapse" data-target="#nav-secend" aria-controls="nav-secend"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>بحث و فلترة
-        </button>
-
-<div class="row wow fadeIn collapse navbar-collapse" id="nav-secend">
-
-	<div class="col-lg-3 col-md-6 mb-4">
-
-	<select class="form-control" id="select_serach" style="align-content: right;">
-		  <option selected> الولاية</option>
-	</select>
-
-	</div>
-
-<div class="col-lg-3 col-md-6 mb-4">
-				
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('masson');" id="btn0"> 
-					<img src="img/masson.png" class="img-fluid" alt="maçon">
-					<h5 class="font-weight-bold blue-text" >بناء</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-6 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('plumber');" id="btn1">
-					<img src="img/plumber.png" class="img-fluid" alt="plumber">
-					<h5 class="font-weight-bold blue-text" >سباك</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-6 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('dyer');" id="btn2">
-					<img src="img/dyer.png" class="img-fluid" alt="dyer">
-					<h5 class="font-weight-bold blue-text" >دهان</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-6 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('truck_driver');" id="btn3">
-					<img src="img/truck.png"  class="img-fluid" alt="builder">
-					<h5 class="font-weight-bold blue-text" >سائق شاحنة وزن ثقيل</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-15 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('mini_truck_driver');" id="btn4">
-					<img src="img/mini-truck.png" class="img-fluid" alt="builder">
-					<h5 class="font-weight-bold blue-text" >سائق شاحنة وزن حفيف</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-15 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place_w('buldozer_driver');" id="btn5">
-					<img src="img/buldozer.png" class="img-fluid" alt="buldozer driver ">
-					<h5 class="font-weight-bold blue-text" >سائق جرافة</h5>
-				</button>
-
-</div>
-<div class="col-lg-3 col-md-15 mb">
-					<button class="btn btn-info btnsmmmal" onclick="filter_place_w('electrician')" id="btn6">
-					<img src="img/electrician.png" class="img-fluid" alt="electrician  ">
-					<h5 class="font-weight-bold blue-text" >كهربائي</h5>
-				</button>
-</div>
-<div class="col-lg-3 col-md-15 mb-4">
-				<button class="btn btn-info btnsmmmal" onclick="filter_place();" id="btn6">
-					<h5 class="font-weight-bold blue-text" >عرض الكل</h5>
-				</button>
-
-</div>
-</div>
-  </nav>
-
-
 <div class="modal fade bottom" id="cookiemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true" data-backdrop='false'>
   <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
     <div class="modal-content">
@@ -284,10 +187,10 @@
     <h4 class="card-title">Mamoun Benhafsa</h4>
     <p class="card-text">Web Devlopper / Design ,Security Resarcher , Simply I Love Tech Simply<br>Want To Know More About Me Go To 
     <a href="#">My Protofile</a></p>
-	<p>
-		تم تطوير هدا التطبيق من اجل مكافحة البطالة بتوفير مناصب العمل عن طريق وضع معلومات عن اقرب عامل  امام الشخص الدي يريد البحث عن عامل 
+  <p>
+    تم تطوير هدا التطبيق من اجل مكافحة البطالة بتوفير مناصب العمل عن طريق وضع معلومات عن اقرب عامل  امام الشخص الدي يريد البحث عن عامل 
 
-	</p>
+  </p>
   </div>
       <div class="modal-footer" >
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -308,10 +211,10 @@
       <div class="modal-body" >
         <div class="card">
   <div class="card-body">
-	<p>
-		قم باختيار الولاية ثم اختر صنف العامل الدي تبحث عنه
+  <p>
+    قم باختيار الولاية ثم اختر صنف العامل الدي تبحث عنه
 
-	</p>
+  </p>
   </div>
 
 </div>
@@ -331,33 +234,77 @@
 
 
 
+<br>
+<div class="container-fluid text-center">
+<div class="container" >
+  <a href="#" class="btn btn-primary">كيفية الدفع ؟</a>
+  <a href="#" class="btn btn-primary">كيفية الدفع عن طريق رمز الاحالة ؟</a>
+  <div class="row">
 
+    <div class="col-sm">
+<div class="card">
 
+  <div class="card-body">
 
+    <h4 class="card-title  badge badge-info" style="font-size: 30px;"><a>250 دج <br> الشهر</a></h4>
+    <p class="card-text"> دج 250 <br> شهر واحد </p>
+    <a href="#" class="btn btn-primary">ادفع</a>
+  </div>
 
-
-      <section class="text-center mb-4">
-
-        <div class="row wow fadeIn" id="search-filter">
-
-          
-
-        </div>
-      </section>
-
+</div>
     </div>
-  </main>
+    <div class="col-sm">
+<div class="card">
 
- <footer class="page-footer font-small blue pt-4">
+  <div class="card-body">
 
-  <!-- Footer Links -->
+    <h4 class="card-title text-danger  badge badge-danger" style="font-size: 30px;"><a>900 دج <br> 4 اشهر</a></h4>
+    <p class="card-text"> دج 900 <br> 4 اشهر </p>
+    <a href="#" class="btn btn-primary">ادفع</a>
+
+  </div>
+
+</div>
+    </div>
+    <br>
+    <div class="col-sm">
+<div class="card">
+
+  <div class="card-body">
+
+    <h4 class="card-title text-warning badge badge-warning" style="font-size: 30px;"><a>1400 دج <br> 6 اشهر</a></h4>
+    <p class="card-text"> دج 1400 <br> 6 اشهر </p>
+    <a href="#" class="btn btn-primary">ادفع</a>
+
+  </div>
+
+</div>
+    </div>
+    <br>
+    <div class="col-sm">
+<div class="card">
+
+  <div class="card-body">
+
+    <h4 class="card-title text-warning badge badge-success" style="font-size: 30px;"><a>2900 دج <br> 12 اشهر</a></h4>
+    <p class="card-text"> دج 2900 <br> 12 اشهر </p>
+    <a href="#" class="btn btn-primary">ادفع</a>
+
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+  <footer class="page-footer font-small blue pt-4">
+
   <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
     <div class="row">
       <div class="col-md-3 mb-md-0 mb-3">
 
-        <!-- Links -->
         <h5 class="text-uppercase">روابط</h5>
 
         <ul class="list-unstyled">
@@ -376,20 +323,16 @@
         </ul>
 
       </div>
-      <!-- Grid column -->
       <div class="col-md-6 mt-md-0 mt-3">
 
-        <!-- Content -->
         <h5 style="height: 7px;" >Khadam<i class="fab fa-searchengin "></i></h5>
         <br>
         <p> اعثر على خدام دون عناء التنقل و البحث</p>
 
       </div>
-      <!-- Grid column -->
 
       <hr class="clearfix w-100 d-md-none pb-3">
 
-      <!-- Grid column -->
 
     </div>
   </div>
@@ -397,9 +340,8 @@
     <a class="btn-floating btn-lg btn-tw" type="button" role="button" href="https://www.facebook.com/khadamsearch" target="_blank"><i class="fab fa-facebook"></i></a>
           <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Khadam  <i class="fab fa-searchengin "></i></p>
   </div>
-  <!-- Copyright -->
 </footer>
-	<script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
